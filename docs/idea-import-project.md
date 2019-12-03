@@ -6,3 +6,6 @@
 ![image](https://github.com/firechiang/rust-study/blob/master/image/idea-import-rust006.png)
 ![image](https://github.com/firechiang/rust-study/blob/master/image/idea-import-rust007.png)
 ![image](https://github.com/firechiang/rust-study/blob/master/image/idea-import-rust008.png)
+#### 未Rust项目配置Java JDK（注意：在项目上点击右键）
+![image](https://github.com/firechiang/rust-study/blob/master/image/idea-rust-jdk001.png)
+![image](https://github.com/firechiang/rust-study/blob/master/image/idea-rust-jdk002.png)
