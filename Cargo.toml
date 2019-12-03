@@ -1,0 +1,12 @@
+[package]
+# 包名（程序打包后的名称）
+name = "rust-study"
+version = "0.1.0"
+authors = ["jiangcihuo <chiang-fire@outlook.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+# 引入随机数依赖包（注意：加 ^ 号标识，表示只要是兼容rand-0.3.14的版本都可以）
+rand = "^0.3.14"
