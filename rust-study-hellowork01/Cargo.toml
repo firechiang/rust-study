@@ -1,6 +1,6 @@
 [package]
 # 包名（程序打包后的名称）
-name = "rust-study"
+name = "rust-study-hellowork01"
 version = "0.1.0"
 authors = ["jiangcihuo <chiang-fire@outlook.com>"]
 edition = "2018"
