@@ -11,6 +11,7 @@ fn main() {
     test_while();
     test_for_1();
     test_for_array();
+    test_for_array1();
 }
 
 /**
@@ -28,12 +29,22 @@ fn test_for_1(){
 }
 
 /**
- * for循环数组简单使用
+ * for循环数组简单使用（有打印下标）
  */
 fn test_for_array() {
     let array = ["1","2","sdsa","sdfsd"];
+    for (i,item) in array.iter().enumerate() {
+        println!("循环数组元素下标{}={}",i,item);
+    }
+}
+
+/**
+ * for循环数组简单使用
+ */
+fn test_for_array1() {
+    let array = ["1","2","sdsa","sdfsd"];
     for item in array.iter() {
-        println!("循环数组元素={}",item);
+        println!("循环数组元素{}",item);
     }
 }
 

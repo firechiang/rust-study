@@ -36,6 +36,29 @@ fn main() {
 }
 
 /**
+ * 进制表示
+ */
+fn test_decimal(){
+    // 十进制的98222
+    let x = 98_222;
+    // 0x开头表示十六进制
+    let y = 0xff;
+    // 0o开头表示八进制
+    let u = 0o77;
+    // 0b开头表示二进制
+    let c = 0b1111_0000;
+    // b开头是字节型的表示是8位无符号的
+    let b = b'A';
+    print!("x={}",x);
+    print!("y={}",y);
+    print!("u={}",u);
+    print!("c={}",c);
+    print!("b={}",b);
+    println!("");
+}
+
+
+/**
  * Boolean类型的数值定义
  */
 fn test_boolean(){
@@ -78,24 +101,4 @@ fn test_data_type() {
     println!("转换之后的值：{}",str);
 }
 
-/**
- * 进制表示
- */
-fn test_decimal(){
-    // 十进制的98222
-    let x = 98_222;
-    // 0x开头表示十六进制
-    let y = 0xff;
-    // 0o开头表示八进制
-    let u = 0o77;
-    // 0b开头表示二进制
-    let c = 0b1111_0000;
-    // 字节型的表示是8位无符号的
-    let b = b'A';
-    print!("x={}",x);
-    print!("y={}",y);
-    print!("u={}",u);
-    print!("c={}",c);
-    print!("b={}",b);
-    println!("");
-}
+
