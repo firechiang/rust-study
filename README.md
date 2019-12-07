@@ -20,7 +20,10 @@ modify PATH variable: yes
 #### 四、[IDEA安装Rust编辑插件][1]
 #### 五、[IDEA创建Rust项目][2]
 #### 六、[IDEA引入Rust项目][3]
-
+#### 七、Rust 编成规范
+ - return 关键字，表示程序不会再向下执行会立即返回（包括在match里面写return，match外面的下面的代码也不会执行） 
+ - 在代码返回的位置，最好使用return关键字并加上分号（如果不写return关键字，那么也不要写分号（因为分号表示代码不返回））
+ 
 [1]: https://github.com/firechiang/rust-study/tree/master/docs/idea-install.md
 [2]: https://github.com/firechiang/rust-study/tree/master/docs/idea-create-project.md
 [3]: https://github.com/firechiang/rust-study/tree/master/docs/idea-import-project.md
