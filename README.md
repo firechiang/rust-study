@@ -22,6 +22,7 @@ modify PATH variable: yes
 #### 六、[IDEA引入Rust项目][3]
 #### 七、[IDEA引入Rust模块][4]
 #### 八、Rust 编成规范
+ - 直接使用引用传递效率更高
  - return 关键字，表示程序不会再向下执行会立即返回（包括在match里面写return，match外面的下面的代码也不会执行） 
  - 在代码返回的位置，最好使用return关键字并加上分号（如果不写return关键字，那么也不要写分号（因为分号表示代码不返回））
  
