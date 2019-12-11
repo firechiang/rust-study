@@ -48,7 +48,8 @@ impl Config {
 fn search<'a> (query: &str,content: &'a str) -> Vec<&'a str> {
     let mut res = Vec::new();
     for line in content.lines() {
-        if line.contains(query) {
+        // to_lowercase()转换成小写，contains()是否包含
+        if line.to_lowercase().contains(query) {
             res.push(line);
         }
     }
