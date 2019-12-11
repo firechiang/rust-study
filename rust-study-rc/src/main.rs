@@ -1,5 +1,6 @@
 /**
  * rc数据类型简单使用（rc可获被引用数量）
+ * 强引用简单使用（注意：如果a引用b，b再引用a，会造成栈溢出）
  */
 fn main() {
     let aa = Rc::new(Cons(5, Rc::new(Cons(10, Rc::new(Nil)))));
