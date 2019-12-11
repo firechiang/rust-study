@@ -7,7 +7,6 @@ fn main() {
     let bb = Cons(3, Rc::clone(&aa));
     let cc = Cons(4, Rc::clone(&aa));
 
-
     let a = Rc::new(Cons(5, Rc::new(Cons(10, Rc::new(Nil)))));
     println!("a创建后，有 {} 个指针指向了a", Rc::strong_count(&a));
     let b = Cons(3, Rc::clone(&a));
