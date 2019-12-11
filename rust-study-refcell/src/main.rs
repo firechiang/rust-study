@@ -5,6 +5,7 @@ use std::cell::RefCell;
  * 弱引用简单使用（如果a引用b，b再引用a，恰巧又是强引用的话就会造成栈溢出。使用弱引用就没有这个问题）
  */
 fn main() {
+
     let leaf = Rc::new(Node {
         value: 3,
         parent: RefCell::new(Weak::new()),
