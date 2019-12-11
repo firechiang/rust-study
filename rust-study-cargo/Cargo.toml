@@ -1,0 +1,20 @@
+[package]
+name = "rust-study-cargo"
+version = "0.1.0"
+authors = ["jiangcihuo <chiang-fire@outlook.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+
+# 打包命令：cargo build --release
+# 生成文档命令：cargo doc --open （注意：--open表示生成文档后，自动打开）
+# 发包到公网的方法：https://doc.rust-lang.org/book/ch14-02-publishing-to-crates-io.html#setting-up-a-cratesio-account （注意：往上面移一点点再看）
+# 开发配置
+[profile.dev]
+# opt-level设置控制Rust应用于代码的优化次数，范围为0到3。应用更多优化会延长编译时间
+opt-level = 0
+# 稳定版配置
+[profile.release]
+opt-level = 3
