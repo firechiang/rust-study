@@ -27,6 +27,7 @@ fn main() {
     let con = search(&config.query,&content);
     println!("包含 {} 的内容：{:?}",query,con);
 
+
     // 获取环境变量
     //let val = env::var("环境变量的key");
     //env::var("环境变量的key").is_err();
