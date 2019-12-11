@@ -13,6 +13,7 @@ fn main() {
         args.insert(2,String::from("content.txt"));
     }
     let (query,filename) = parse_config(&args);
+    // |err| {} 是一个用于回调的闭包函数（就是JAVA里面的匿名函数）
     let config = Config::from(&args).unwrap_or_else(|err| {
         println!("解析参数时出现问题: {}", err);
         // 程序退出
