@@ -11,7 +11,6 @@ fn main() {
         parent: RefCell::new(Weak::new()),
         children: RefCell::new(vec![]),
     });
-
     println!("leaf parent = {:?}", leaf.parent.borrow().upgrade());
 
     let branch = Rc::new(Node {
