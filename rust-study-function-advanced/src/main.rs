@@ -4,6 +4,7 @@
 fn main() {
     // 带有函数指针的函数调用
     let v = do_witice(add_one,3);
+
     println!("v={}",v);
 
     let mut vs = vec![1,3,4,5];
