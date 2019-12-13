@@ -97,6 +97,7 @@ pub struct ThreadPool{
     sender: mpsc::Sender<Message>,
 }
 impl ThreadPool {
+    
     // 创建线程池
     fn new (size: usize) -> ThreadPool {
         /**
