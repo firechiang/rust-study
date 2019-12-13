@@ -2,6 +2,7 @@
  * 生命周期简单使用（注意：这一章得再看看）
  */
 fn main() {
+
     let novel = String::from("标识生命周期，简单使用");
     let first_sentence = novel.split('.').next().expect("Could not find a '.'");
     let i = ImportantExcerpt { part: first_sentence };
