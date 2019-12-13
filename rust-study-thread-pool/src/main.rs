@@ -20,7 +20,7 @@ fn main() {
             thread::sleep(Duration::from_secs(2));
         });
     }
-    thread::sleep(Duration::from_secs(1000000));
+    thread::sleep(Duration::from_secs(4));
 }
 
 // 工作函数接口
