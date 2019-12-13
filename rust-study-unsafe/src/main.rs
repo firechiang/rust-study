@@ -9,7 +9,7 @@ fn add_to_count(inc: u32) {
 }
 
 /**
- * unsafe关键字直接操作内存简单使用
+ * unsafe关键字标识为内存不安全的操作（其实就是在编译期间减少了一些检查）
  * 调用 C 代码简单使用：https://doc.rust-lang.org/book/ch19-01-unsafe-rust.html#using-extern-functions-to-call-external-code
  */
 fn main() {
@@ -69,11 +69,11 @@ unsafe fn test_unsafe () {
     println!("调用了内存不安全的函数");
 }
 
-// 对象直接分配到内存
+
 unsafe trait Foo {
     // methods go here
 }
-// 对象直接分配到内存
+
 unsafe impl Foo for i32 {
     // method implementations go here
 }
