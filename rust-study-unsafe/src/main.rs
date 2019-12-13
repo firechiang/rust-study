@@ -13,6 +13,7 @@ fn add_to_count(inc: u32) {
  * 调用 C 代码简单使用：https://doc.rust-lang.org/book/ch19-01-unsafe-rust.html#using-extern-functions-to-call-external-code
  */
 fn main() {
+
     // 指向一个内存的地址
     let address = 0x012345usize;
     // 将其转换成指向一个静态变量
