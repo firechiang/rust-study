@@ -1,3 +1,6 @@
+/**
+ * 递归写法实现斐波那契数算法
+ */
 fn main() {
     println!("请输入要计算的数据：");
     let mut strr = String::new();
