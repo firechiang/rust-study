@@ -1,7 +1,7 @@
 use std::time::Duration;
 
 /**
- * 控制语句if换个循环语句简单使用
+ * 循环语句for,while,loop用法以及使用loop循环的返回值进行赋值简单使用
  */
 fn main() {
     test_if();
