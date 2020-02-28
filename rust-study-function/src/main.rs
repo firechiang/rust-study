@@ -1,7 +1,7 @@
 use std::borrow::Borrow;
 
 /**
- * 函数的声明和使用
+ * 函数的声明和使用以及代码块的简单使用
  */
 fn main() {
     test_on_param(0,1);
@@ -42,7 +42,7 @@ fn test_code_block() {
     let y = {
         let t = 10;
         // 表示返回t + 1
-        t + 1//（注意：这理不能写分号，否则报错）
+        t + 1//（注意：这理不能写分号，否则报错。因为这个一行表示返回。可以写成 return t + 1;）
     };
     println!("x={},y={}",x,y);
 }
