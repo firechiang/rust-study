@@ -1,7 +1,8 @@
 /**
- * 变量从新赋值简单测试
+ * 变量从新赋值以及mut关键字修饰可变变量和使用const关键字修饰长量简单使用
  */
 fn main() {
+    const MU_TEST: u32 = 8;
     test_mut();
     test_shadowing();
 }
