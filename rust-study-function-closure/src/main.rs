@@ -1,7 +1,7 @@
 use std::thread;
 use std::time::Duration;
 /**
- * 闭包函数简单使用（就是匿名函数）
+ * 闭包函数简单使用（就是JAVA的匿名函数和Lambda表达式）
  */
 fn main() {
     let intensity = 10;
