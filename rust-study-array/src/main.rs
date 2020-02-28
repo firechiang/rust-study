@@ -1,5 +1,5 @@
 /**
- * 数组类型简单使用
+ * 基础数组和tuple高级数组的使用方法
  */
 fn main() {
     test_simple_array();
