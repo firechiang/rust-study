@@ -26,7 +26,7 @@ fn main() {
 
 
 /**
- * 正常读取文件里面的内容,使用自定义的枚举返回
+ * 正常读取文件里面的内容,使用自定义的枚举返回（注意：String表示OK的泛型，io::Error表示Err的泛型）
  */
 fn test_file_read1 () -> Res<String,io::Error> {
     let file = File::open("gui-config.json");
@@ -45,7 +45,7 @@ fn test_file_read1 () -> Res<String,io::Error> {
 }
 
 /**
- * 使用简写的方式读取文件里面的内容
+ * 使用简写的方式读取文件里面的内容（注意：String表示OK的泛型，io::Error表示Error的泛型）
  */
 fn read_username_from_file() -> Result<String, io::Error> {
     // 打开文件（?号表示如果打开失败，直接返回Error）
