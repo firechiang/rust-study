@@ -45,7 +45,7 @@ fn main() {
  * 定义一个枚举类型
  */
 enum King {
-    // 注意： & 'static str 表示一个静态字符串
+    // 注意： & 'static str 表示一个静态字符串（就是静态生命周期的字符串，就像JAVA注解里面的字符串属性所需要的值）
     Plant(u32,& 'static str),
     Animal(u32,& 'static str)
 }
