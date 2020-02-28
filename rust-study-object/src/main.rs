@@ -1,5 +1,5 @@
 /**
- * 面向对象的封装
+ * 面向对象以及多态简单使用
  */
 fn main() {
     let a = AveragedCollection {
