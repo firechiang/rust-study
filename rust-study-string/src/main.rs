@@ -1,5 +1,5 @@
 /**
- * String 类型简单使用
+ * String类型简单使用（注意：&str表示基础值，String 表示&str的包装对象，里面包含很多操作函数）
  */
 fn main() {
     // 初始化一个String
