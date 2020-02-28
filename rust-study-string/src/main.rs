@@ -1,7 +1,16 @@
 /**
- * String类型简单使用（注意：&str表示基础值，String 表示&str的包装对象，里面包含很多操作函数）
+ * String类型简单使用（注意：&str表示基础数据类型，String 表示&str的包装对象，里面包含很多操作函数）
  */
 fn main() {
+    let aaaa = "我是aaaaa";
+    println!("aaaa={}",aaaa);
+    let aaaa1 = aaaa;
+    println!("aaaa={}",aaaa);
+    let bbbb = String::from("我是bbbbb");
+    println!("bbbb={}",bbbb);
+    let bbbb1 = bbbb;
+    // 放开注释报错，因为bbbb的内存已经释放了，不能再用了
+    //println!("bbbb={}",bbbb);
     // 初始化一个String
     let mut s1 = String::from("测试String");
     // 拼接字符串
