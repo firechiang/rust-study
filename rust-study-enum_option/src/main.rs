@@ -1,5 +1,5 @@
 /**
- * Rust 对空值的处理（就是null对象的处理）
+ * Rust对空值的处理，Option的用法（就是null对象的处理）
  */
 fn main() {
     // 初始化一个有值的Option（<u32>表示泛型）
