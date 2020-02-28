@@ -1,5 +1,5 @@
 /**
- * 字符串和数组截取简单使用
+ * 字符串和数组截取简单使用（里面有判断一个字符是否是空格）
  */
 fn main() {
     let mut s = String::from("sdfsd sdsfds");
