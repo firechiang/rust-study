@@ -33,6 +33,7 @@ fn main() {
             King::Animal(size,name) => println!("打印2"),
             // King::Animal或者是King::Plant也可以看成是默认情况，点代表参数站位符，2个点就代表2个参数（默认情况也可以像最下面那样写）（注意：一定要写默认情况，否则上面的匹配里面不能写if）
             King::Animal(..) | King::Plant(..) => ()
+            // 其它情况或默认情况
             //_ => ()
         }
     }
