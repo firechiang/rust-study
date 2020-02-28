@@ -14,7 +14,7 @@ fn main() {
     let novel = String::from("标识生命周期，简单使用");
     let first_sentence = novel.split('.').next().expect("Could not find a '.'");
     // 注意：如果ImportantExcerpt类没有标识要和part具有相同的生命周期，下面的代码是会报错的（）
-    let i = ImportantExcerpt { part: first_sentence };
+    let i = ImportantExcerpt { part: first_sentence};
     println!("i={:?}",i);
 }
 // 这个函数是编译不过的因为参数和返回值用的是同一个值，但是参数和返回值都有各自的生命周期，编译期间不知道以哪个生命周期为准，所以报错
@@ -27,7 +27,7 @@ fn main() {
 }*/
 
 /**
- *  'a 是生命周期标识（如果参数或返回值有 'a 就表示生命周期的长度都相同）
+ * 'a 是生命周期标识（如果参数或返回值有 'a 就表示参数和返回值的生命周期相同）
  */
 fn longest<'a>(x: &'a str, y: &'a str) -> &'a str {
     if x.len() > y.len() {
@@ -39,6 +39,7 @@ fn longest<'a>(x: &'a str, y: &'a str) -> &'a str {
 
 /**
  * 表示生命周期的类（这个表示类对象和属性part具有相同的生命周期（因为part是个引用类型，它的生命周期很可能过期，加了生命周期标识，只要类的生命周期不过期，part引用就不过期））
+ * 注意：类里面如果有属性使用了引用类型，那么一定要加上生命周期标识（也就是属性引用和类对象生命周期相同）
  */
 #[derive(Debug)]
 struct ImportantExcerpt<'a> {
