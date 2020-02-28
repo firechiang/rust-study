@@ -24,7 +24,7 @@ struct Parse<'a> {
 //类与类属性标识了相同的生命周期，那么类扩展impl也需要标识生命周期（就是写类函数的地方也要标识生命周期）
 // 注意：'a这个符号可以随便起，只要是以'开头就可以
 impl<'a> Parse<'a> {
-    // 注意：() 表示OK的泛型，&'a str 表示Err的泛型
+    // 注意：() 表示OK的泛型，而且是任意的相当于JAVA的?号，&'a str 表示Err的泛型
     fn parse (&self) -> Result<(),&'a str>{
         return Err(&self.context.0[1..]);
     }
