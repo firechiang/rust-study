@@ -1,7 +1,7 @@
 use std::borrow::Borrow;
 
 /**
- * Rust枚举类型用法和配合match（匹配）简单使用
+ * Rust枚举类型用法以及配合match（匹配）使用和'static静态字符串说明
  */
 fn main() {
     let ipAddr = IpAddr::new(IpAddrKind::V4,String::from("127.0.0.1"));
