@@ -1,5 +1,5 @@
 /**
- * 非基础数据类型引用传递简单使用（注意：同一作用域下一个变量可以有多个可读的引用，不能有多个可写的引用）
+ * 非基础数据类型引用传递和创建作用域简单使用（注意：同一作用域下一个变量可以有多个可读的引用，不能有多个可写的引用）
  */
 fn main() {
     let s = String::from("参数的值");
@@ -35,10 +35,12 @@ fn test_references_mut (s: &mut String) {
  */
 fn test_references_value () {
     let mut s = String::from("测试引用赋值");
+    // 作用域一（中括号括起来的为一个作用域）
     {
         let s2 = &mut s;
         println!("s2={}",s2);
     }
+    // 作用域二
     let s1 = &mut s;
     //let s2 = &mut s; 注意：注释打开会报错，因为同一个作用域下，一个变量不能将可变引用同时赋给多个其它变量
     println!("s1={}",s1);
