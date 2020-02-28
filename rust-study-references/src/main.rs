@@ -35,7 +35,7 @@ fn test_references_mut (s: &mut String) {
  */
 fn test_references_value () {
     let mut s = String::from("测试引用赋值");
-    // 作用域一（中括号括起来的为一个作用域）
+    // 作用域一（中括号括起来的为一个作用域（这就是创建作用域））
     {
         let s2 = &mut s;
         println!("s2={}",s2);
