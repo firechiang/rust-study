@@ -1,7 +1,7 @@
 use std::str::from_boxed_utf8_unchecked;
 
 /**
- * 变量作用域
+ * 变量的有效范围简单测试和值传递对象传递说明，以及函数返回多个值的简单使用
  * 基础数据类型都是值传递，对象包括数组都是对象传递（注意：如果将一个变量的对象赋给另一个变量，那么前一个变量将无法使用，因为它的对象已经没有了）
  * 变量出作用域以后内存立即释放（Rust自动调动drop函数释放内存）
  */
@@ -19,7 +19,7 @@ fn main() {
     let value = 5;
     test_i32(value);
     println!("测试基础数据类型，值传递。在函数调用以后还可以使用。value={}",value);
-
+    // 函数返回多个值（这个是返回2个）
     let (s,length) = test_string_array(String::from("测试数组传递"));
     println!("测试数组传递s={},length={}",s,length);
 }
