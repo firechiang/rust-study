@@ -1,5 +1,5 @@
 /**
- * 接口简单使用
+ * 接口定义和实现简单使用
  */
 fn main() {
     let tweet = Tweet {
