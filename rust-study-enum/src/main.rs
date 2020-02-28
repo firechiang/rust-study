@@ -1,7 +1,7 @@
 use std::borrow::Borrow;
 
 /**
- * Rust枚举类型用法以及配合match（匹配）使用和'static静态字符串说明
+ * 枚举类型用法和配合match（匹配）使用和'static静态字符串说明和循环匹配引用
  */
 fn main() {
     let ipAddr = IpAddr::new(IpAddrKind::V4,String::from("127.0.0.1"));
@@ -25,7 +25,9 @@ fn main() {
         King::Plant(16,"天剑")
     ];
     let mut oldSize: u32 = 13;
+    // 循环引用
     for item in &array1 {
+        // 匹配引用
         match *item {
             King::Plant(size,name) if size > oldSize => {
                 println!("打印1");
