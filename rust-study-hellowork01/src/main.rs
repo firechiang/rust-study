@@ -5,7 +5,7 @@ use std::io;
 use rand::Rng;
 use std::cmp::Ordering;
 /**
- * 猜数字小游戏
+ * 猜数字小游戏（引用外部包 extern crate 以及接收命令行参数的处理）
  */
 fn main() {
     // 生成5-100的随机数（注意：101是不会有的）
