@@ -1,7 +1,7 @@
 use std::borrow::Borrow;
 
 /**
- * 函数的声明和调用
+ * 函数的声明和使用
  */
 fn main() {
     test_on_param(0,1);
