@@ -1,5 +1,5 @@
 /**
- * if分支语句简单使用
+ * if分支语句简单使用以及使用if判断进行赋值简单使用
  */
 fn main() {
     let op = Some(5);
@@ -20,6 +20,14 @@ fn main() {
     if 2 == 2 {
         println!("2==2");
     }
+
+    // 使用if判断后的返回值，进行赋值（注意：最后结束要加分号，否则报错）
+    let number = if true {
+        5
+    }else{
+        6
+    };
+    println!("number={}",number);
 }
 
 #[derive(Debug)]
