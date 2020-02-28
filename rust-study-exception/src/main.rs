@@ -3,7 +3,7 @@ use std::io::ErrorKind;
 use std::io::Read;
 use std::io;
 /**
- * 异常处理简单使用
+ * 异常处理简单使用（注意：结尾的?号表示如果处理失败，直接返回Error）
  */
 fn main() {
     //panic!("程序发生错误，并退出");
