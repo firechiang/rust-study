@@ -1,5 +1,5 @@
 /**
- * HashMap 简单使用
+ * HashMap简单使用
  */
 fn main() {
     // 引入HashMap
