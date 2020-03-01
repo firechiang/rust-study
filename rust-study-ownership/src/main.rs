@@ -22,6 +22,15 @@ fn main() {
     // 函数返回多个值（这个是返回2个）
     let (s,length) = test_string_array(String::from("测试数组传递"));
     println!("测试数组传递s={},length={}",s,length);
+
+    let aaa = "sdasdas";
+    let aaa = "我是修改后的值";
+    // 可以使用定义一个同名变量来避免变量被释放
+    println!("aaa={}",aaa);
+    let bbb = String::from("阿三大苏打萨达");
+    test_simepl_string1(&bbb);
+    // 这里bbb还可以使用是因为上面的函数使用的是引用传递，而引用传递效率也最高（推荐使用）
+    println!("bbb={}",bbb);
 }
 
 /**
@@ -87,4 +96,8 @@ fn test_simaple_string() {
     let mut s = String::from("测试String");
     s.push_str("后面拼接的内容");
     println!("测试:{}",s);
+}
+
+fn test_simepl_string1(s: &String) {
+    println!("最后引用传递s={}",s);
 }
