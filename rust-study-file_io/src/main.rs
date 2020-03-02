@@ -2,7 +2,7 @@ use std::env;
 use std::fs;
 use std::process;
 /**
- * 文件读取以及错误处理和命令行参数的获取
+ * 文件读取错误处理和命令行参数以及环境变量获取
  * 注意：使用命令执行该程序，在当前文件目录下，执行命令：cargo run somebody content.txt（注意：somebody和content.txt表示是参数）
  */
 fn main() {
