@@ -9,7 +9,7 @@ fn add_to_count(inc: u32) {
 }
 
 /**
- * unsafe关键字标识为内存不安全的操作（其实就是在编译期间减少了一些检查）
+ * unsafe关键字标识为内存不安全的操作（其实就是纯指针在编译期间减少了一些检查）
  * 调用 C 代码简单使用：https://doc.rust-lang.org/book/ch19-01-unsafe-rust.html#using-extern-functions-to-call-external-code
  */
 fn main() {
