@@ -1,5 +1,5 @@
 /**
- * 自定义类型简单使用
+ * 使用type关键字自定义类型简单使用（不推荐使用）
  */
 fn main() {
     // 定义Kilometers的类型是i32类型
@@ -22,4 +22,5 @@ fn main() {
         Box::new(|| println!("hi"))
     }
 
+    let tk = returns_long_type();
 }
