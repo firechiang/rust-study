@@ -22,13 +22,13 @@ fn main() {
     println!("c销毁后，有 {} 个指针指向了a", Rc::strong_count(&a));
 
     let five = Rc::new(5);
-    // 调用downgrade函数获取five的引用（注意：Weak对象就是当前five的引用，但是没有其所有权）
+    // 调用downgrade函数获取five的弱引用（注意：Weak对象就是当前five的弱引用，但是没有其所有权）
     let weak_five = Rc::downgrade(&five);
     // 调用upgrade函数,获取five的值（注意：这个值是 Optical<Rc<T>> 类型）
     let strong_five: Option<Rc<_>> = weak_five.upgrade();
     // 获取five引用实际的值
     println!("{}", strong_five.unwrap());
-    println!("weak: {}, strong: {}", Rc::weak_count(&five), Rc::strong_count(&five));
+    println!("弱引用数量 weak = {}, 强引用数量 strong = {}", Rc::weak_count(&five), Rc::strong_count(&five));
 }
 
 enum List {
