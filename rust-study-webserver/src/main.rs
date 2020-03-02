@@ -5,6 +5,9 @@ use std::net::TcpStream;
 use std::thread;
 use std::thread::Thread;
 
+/**
+ * 使用线程池实现简单的HTTP服务器
+ */
 fn main() {
     let listener = TcpListener::bind("127.0.0.1:9909").unwrap();
     for stream in listener.incoming() {
