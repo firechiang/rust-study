@@ -1,7 +1,7 @@
 use std::thread;
 use std::time::Duration;
 /**
- * 线程相关
+ * 线程相关以及使用move关键字获取变量的所有权简单使用
  */
 fn main() {
     // 启动一个新的线程（spawn函数就是启动一个新的线程，它的参数是一个匿名函数）
