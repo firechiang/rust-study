@@ -1,5 +1,5 @@
 /**
- * 泛型简单使用
+ * 泛型简单使用包括泛型引用写法
  */
 fn main() {
     let array = ["wqwq","asasd","fdsfsd"];
