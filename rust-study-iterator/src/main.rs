@@ -1,5 +1,5 @@
 /**
- * 迭代器简单使用
+ * 循环迭代器和自定义迭代器以及Stream流处理还有改变集合元素的引用简单使用
  */
 fn main() {
     let vec = vec![32,54,68];
@@ -15,7 +15,7 @@ fn main() {
     let count = iter.count();
     //println!("求和结果：total={}",total);
     println!("元素的个数count={}",count);
-    // Stream流的方式使用迭代器(map里面处理每个元素加1)
+    // Stream流的方式使用迭代器(map里面处理每个元素加1)（注意：这个不能改变引用地址）
     let vec2: Vec<_> = vec.iter().map(|x| x + 1).collect();
     println!("每个元素加1后，vec2={:?}",vec2);
     // into_iter()函数返回的迭代器，可以抽离元素
@@ -38,9 +38,19 @@ fn main() {
     println!("第五个位置={:?}",counter.next());
     println!("第六个位置={:?}",counter.next());
 
-    // 自定义的结构体，实现迭代器（skip()函数是跳过一个元素）
+    // 自定义的结构体，实现迭代器
+    // zip() 函数是将调用者迭代器和zip的参数迭代器合并（注意：这个合并是以最小个数的元素为基准，多出来的元素直接忽略掉）
+    // skip()函数是跳过第1个元素
+    // 说明：
+    // zip的元素是                                   1 2 3 4 5
+    // zip参数的元素是（因为跳过了第一个元素，所以少了一个） 2 3 4 5
+    // 最后就是 1,2调用map；2,3调用map；3,4调用map；4,5调用map；
+    // map有两个参数就是因为zip函数（注意：如果没有zip函数，map是只有一个参数的）
     let sum: u32 = Counter::new().zip(Counter::new().skip(1))
-                                 .map(|(a, b)| a * b)
+                                 .map(|(a, b)| {
+                                     println!("a={},b={}",a,b);
+                                     a * b
+                                 })
                                  .filter(|x| x % 3 == 0)
                                  .sum();
     println!("sum={}",sum);
@@ -70,11 +80,13 @@ impl Counter {
  * 自定义的类实现迭代器
  */
 impl Iterator for Counter {
+    // 定义Item的类型是u32
     type Item = u32;
-
+    // self表示调用方法的对象，相当于this
+    // Self表示调用者的类型，相当于this的类型
     fn next(&mut self) -> Option<Self::Item> {
         self.count += 1;
-
+        // 只要count小于6就会有下一个元素，所以只要迭代Counter对象就会返回元素1,2,3,4,5
         if self.count < 6 {
             Some(self.count)
         } else {
