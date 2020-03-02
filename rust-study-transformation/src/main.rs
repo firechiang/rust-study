@@ -1,6 +1,6 @@
 use std::net::IpAddr;
 /**
- * 类型强制转换简单使用
+ * 类型强制转换简单用法
  */
 fn main() {
     let ip = "127.0.0.1".parse::<IpAddr>().unwrap();
