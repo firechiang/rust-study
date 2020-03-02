@@ -54,6 +54,10 @@ fn main() {
                                  .filter(|x| x % 3 == 0)
                                  .sum();
     println!("sum={}",sum);
+    // 迭代对象类型的元素
+    let ps = vec![Print{x:10,y:20},Print{x:12,y:45}];
+    let total: u32 = ps.iter().map(|&Print{x,y}|  x * x + y * y).sum();
+    println!("total={}",total);
 }
 
 /**
@@ -125,4 +129,11 @@ fn filters_by_size() {
             Shoe { size: 10, style: String::from("boot") },
         ]
     );
+}
+
+
+#[derive(Debug)]
+struct Print {
+    x: u32,
+    y: u32
 }
