@@ -12,6 +12,9 @@ const WINDOW_TITLE: &'static str = "贪吃蛇";
 const WIDTH: u32 = 25;
 const HEIGHT: u32 = 25;
 
+/**
+ * 贪吃蛇游戏实现
+ */
 fn main() {
     let size = [blocks_in_pixels(WIDTH), blocks_in_pixels(HEIGHT)];
 
