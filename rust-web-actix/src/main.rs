@@ -30,6 +30,10 @@ async fn main() -> std::io::Result<()> {
             .wrap(CookieSession::signed(&[0; 32]).secure(false))
             // 开启记录请求日志
             .wrap(middleware::Logger::default())
+            // 添加自定义头信息
+            .wrap(middleware::DefaultHeaders::new().header("X-Version", "0.2"))
+            // 开启压缩
+            .wrap(middleware::Compress::default())
             .service(favicon)
             .service(index)
             .route("/hello/{name}", web::get().to(hello))
