@@ -31,7 +31,7 @@ async fn main() -> std::io::Result<()> {
             // 开启记录请求日志
             .wrap(middleware::Logger::default())
             // 添加自定义头信息
-            .wrap(middleware::DefaultHeaders::new().header("X-Version", "0.2"))
+            .wrap(middleware::DefaultHeaders::new().header("X-Version", "0.2").header("server","actix-server"))
             // 开启压缩
             .wrap(middleware::Compress::default())
             .service(favicon)
