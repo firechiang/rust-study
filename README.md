@@ -28,10 +28,10 @@ $ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 $ vi $HOME/.cargo/config
 
 [source.crates-io]
-replace-with = 'ustc'
-
-[source.ustc]
 registry = "https://mirrors.ustc.edu.cn/crates.io-index"
+replace-with = 'ustc'
+[source.ustc]
+registry = "git://mirrors.ustc.edu.cn/crates.io-index"
 
 # 测试验证国内源
 $ cargo search
