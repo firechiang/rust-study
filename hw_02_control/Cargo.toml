@@ -1,0 +1,10 @@
+[package]
+name = "hw_02_control"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+# * 表示使用最新版本
+rand="*"
